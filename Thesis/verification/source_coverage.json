@@ -1,0 +1,2102 @@
+[
+  {
+    "type": "heading",
+    "text": "Introduction",
+    "source": "chapters/01_introduction.tex",
+    "pdf_page": 17
+  },
+  {
+    "type": "heading",
+    "text": "Motivation",
+    "source": "chapters/01_introduction.tex",
+    "pdf_page": 17
+  },
+  {
+    "type": "heading",
+    "text": "Problem statement",
+    "source": "chapters/01_introduction.tex",
+    "pdf_page": 18
+  },
+  {
+    "type": "equation",
+    "number": 1,
+    "source": "chapters/01_introduction.tex",
+    "pdf_page": 18
+  },
+  {
+    "type": "equation",
+    "number": 2,
+    "source": "chapters/01_introduction.tex",
+    "pdf_page": 18
+  },
+  {
+    "type": "equation",
+    "number": 3,
+    "source": "chapters/01_introduction.tex",
+    "pdf_page": 18
+  },
+  {
+    "type": "heading",
+    "text": "Beam dynamics",
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "heading",
+    "text": "Linear and Nonlinear beam dynamics",
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 4,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 5,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 6,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 7,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 8,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 9,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 19
+  },
+  {
+    "type": "equation",
+    "number": 10,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "equation",
+    "number": 11,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "equation",
+    "number": 12,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "equation",
+    "number": 13,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "equation",
+    "number": 14,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "equation",
+    "number": 15,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "equation",
+    "number": 16,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 20
+  },
+  {
+    "type": "heading",
+    "text": "Longitudinal Beam Dynamics",
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 17,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 18,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 19,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 20,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 21,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 22,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 23,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "equation",
+    "number": 24,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 21
+  },
+  {
+    "type": "heading",
+    "text": "Distribution-level Beam Dynamics",
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 25,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "heading",
+    "text": "Statistical descriptors and beam-size convention",
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 26,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 27,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 28,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 29,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 30,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 22
+  },
+  {
+    "type": "equation",
+    "number": 31,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 23
+  },
+  {
+    "type": "equation",
+    "number": 32,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 23
+  },
+  {
+    "type": "equation",
+    "number": 33,
+    "source": "chapters/02_beam_dynamics.tex",
+    "pdf_page": 23
+  },
+  {
+    "type": "heading",
+    "text": "Simulation workflow",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 23
+  },
+  {
+    "type": "heading",
+    "text": "Six-dimensional Xsuite tracking dataset",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 23
+  },
+  {
+    "type": "equation",
+    "number": 34,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 24
+  },
+  {
+    "type": "equation",
+    "number": 35,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 24
+  },
+  {
+    "type": "equation",
+    "number": 36,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 24
+  },
+  {
+    "type": "equation",
+    "number": 37,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 24
+  },
+  {
+    "type": "equation",
+    "number": 38,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 24
+  },
+  {
+    "type": "equation",
+    "number": 39,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 24
+  },
+  {
+    "type": "equation",
+    "number": 40,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "heading",
+    "text": "PyColleff longitudinal dataset",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "equation",
+    "number": 41,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "equation",
+    "number": 42,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "equation",
+    "number": 43,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "equation",
+    "number": 44,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "equation",
+    "number": 45,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 25
+  },
+  {
+    "type": "heading",
+    "text": "Data representation and physical quantities",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "heading",
+    "text": "Empirical measures and reduced profiles",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 46,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 47,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "heading",
+    "text": "Fifteen pairwise phase-space projections",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 48,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 49,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 50,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 51,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 26
+  },
+  {
+    "type": "equation",
+    "number": 52,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 27
+  },
+  {
+    "type": "equation",
+    "number": 53,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 27
+  },
+  {
+    "type": "heading",
+    "text": "Computational cost",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 27
+  },
+  {
+    "type": "equation",
+    "number": 54,
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "heading",
+    "text": "Data and code availability",
+    "source": "chapters/03_simulation_workflow.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "heading",
+    "text": "Machine-learning methodology",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "heading",
+    "text": "Machine-learning objectives and foundations",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "heading",
+    "text": "From data to prediction",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "equation",
+    "number": 55,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "equation",
+    "number": 56,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 29
+  },
+  {
+    "type": "equation",
+    "number": 57,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 30
+  },
+  {
+    "type": "heading",
+    "text": "Neural-network building blocks",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 30
+  },
+  {
+    "type": "equation",
+    "number": 58,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 30
+  },
+  {
+    "type": "heading",
+    "text": "Conditional variational latent representation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 30
+  },
+  {
+    "type": "equation",
+    "number": 59,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "equation",
+    "number": 60,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "equation",
+    "number": 61,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "equation",
+    "number": 62,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "heading",
+    "text": "Operator-learning formulation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "equation",
+    "number": 63,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "equation",
+    "number": 64,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 31
+  },
+  {
+    "type": "equation",
+    "number": 65,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "equation",
+    "number": 66,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "heading",
+    "text": "Neural operators",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "heading",
+    "text": "From kinetic equations to solution operators",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "equation",
+    "number": 67,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "equation",
+    "number": 68,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "equation",
+    "number": 69,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "equation",
+    "number": 70,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 32
+  },
+  {
+    "type": "equation",
+    "number": 71,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 72,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 73,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 74,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 75,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 76,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 77,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "equation",
+    "number": 78,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 33
+  },
+  {
+    "type": "heading",
+    "text": "General neural-operator architecture",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 79,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 80,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 81,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 82,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 83,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 84,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "equation",
+    "number": 85,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 34
+  },
+  {
+    "type": "heading",
+    "text": "Discretization and approximation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 35
+  },
+  {
+    "type": "equation",
+    "number": 86,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 35
+  },
+  {
+    "type": "equation",
+    "number": 87,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 35
+  },
+  {
+    "type": "equation",
+    "number": 88,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 35
+  },
+  {
+    "type": "equation",
+    "number": 89,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 35
+  },
+  {
+    "type": "equation",
+    "number": 90,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 35
+  },
+  {
+    "type": "equation",
+    "number": 91,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 36
+  },
+  {
+    "type": "equation",
+    "number": 92,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 36
+  },
+  {
+    "type": "heading",
+    "text": "Fourier Neural Operator",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 93,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 94,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 95,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 96,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 97,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 98,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 99,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 100,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 101,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 37
+  },
+  {
+    "type": "equation",
+    "number": 102,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 38
+  },
+  {
+    "type": "heading",
+    "text": "Graph Neural Operator",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 38
+  },
+  {
+    "type": "equation",
+    "number": 103,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 38
+  },
+  {
+    "type": "equation",
+    "number": 104,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 105,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 106,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 107,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 108,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 109,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 110,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 111,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "equation",
+    "number": 112,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 39
+  },
+  {
+    "type": "heading",
+    "text": "Directed graph representation of the accelerator lattice",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 113,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 114,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 115,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 116,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 117,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 118,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "heading",
+    "text": "Latent-state propagation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 119,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 40
+  },
+  {
+    "type": "equation",
+    "number": 120,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 121,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 122,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 123,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 124,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "heading",
+    "text": "Kernel parameterization",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 125,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 126,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 127,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 128,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 41
+  },
+  {
+    "type": "equation",
+    "number": 129,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 42
+  },
+  {
+    "type": "equation",
+    "number": 130,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 42
+  },
+  {
+    "type": "equation",
+    "number": 131,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 42
+  },
+  {
+    "type": "equation",
+    "number": 132,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 42
+  },
+  {
+    "type": "equation",
+    "number": 133,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 42
+  },
+  {
+    "type": "equation",
+    "number": 134,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 135,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 136,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 137,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "heading",
+    "text": "Variational latent representation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "heading",
+    "text": "VAE formulation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 138,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 139,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "heading",
+    "text": "Conditional VAE",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 140,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 43
+  },
+  {
+    "type": "equation",
+    "number": 141,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 44
+  },
+  {
+    "type": "equation",
+    "number": 142,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 45
+  },
+  {
+    "type": "equation",
+    "number": 143,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "equation",
+    "number": 144,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "equation",
+    "number": 145,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "equation",
+    "number": 146,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "equation",
+    "number": 147,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "equation",
+    "number": 148,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "equation",
+    "number": 149,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 46
+  },
+  {
+    "type": "heading",
+    "text": "Tokenized latent dynamics",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 48
+  },
+  {
+    "type": "equation",
+    "number": 150,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 48
+  },
+  {
+    "type": "equation",
+    "number": 151,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 48
+  },
+  {
+    "type": "heading",
+    "text": "Element tokenization",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 48
+  },
+  {
+    "type": "equation",
+    "number": 152,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 48
+  },
+  {
+    "type": "heading",
+    "text": "Transformer baseline",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 49
+  },
+  {
+    "type": "equation",
+    "number": 153,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 49
+  },
+  {
+    "type": "heading",
+    "text": "Local-window Transformer",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 49
+  },
+  {
+    "type": "equation",
+    "number": 154,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 49
+  },
+  {
+    "type": "heading",
+    "text": "Graph Neural Operator latent propagator",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 155,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 156,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "heading",
+    "text": "Loss functions and validation metrics",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 157,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 158,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 159,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 160,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 51
+  },
+  {
+    "type": "equation",
+    "number": 161,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 52
+  },
+  {
+    "type": "heading",
+    "text": "Conditional latent uncertainty estimation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 52
+  },
+  {
+    "type": "heading",
+    "text": "Posterior sampling and propagation",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 162,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 163,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 164,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 165,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 166,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "heading",
+    "text": "Monte-Carlo estimators",
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 167,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 168,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 169,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 53
+  },
+  {
+    "type": "equation",
+    "number": 170,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "equation",
+    "number": 171,
+    "source": "chapters/04_machine_learning_methodology.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "heading",
+    "text": "Results",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "heading",
+    "text": "Longitudinal operator learning with FNO",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "heading",
+    "text": "Learning reduced longitudinal profiles",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "equation",
+    "number": 172,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "heading",
+    "text": "Haïssinski-profile reconstruction",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "equation",
+    "number": 173,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 54
+  },
+  {
+    "type": "heading",
+    "text": "Six-dimensional latent representation",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 55
+  },
+  {
+    "type": "heading",
+    "text": "CVAE reconstruction quality",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 55
+  },
+  {
+    "type": "heading",
+    "text": "Latent-space diagnostics",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 56
+  },
+  {
+    "type": "equation",
+    "number": 174,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 58
+  },
+  {
+    "type": "equation",
+    "number": 175,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 58
+  },
+  {
+    "type": "heading",
+    "text": "Transformer latent propagation and the effect of locality",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 60
+  },
+  {
+    "type": "heading",
+    "text": "Global-attention baseline",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 60
+  },
+  {
+    "type": "equation",
+    "number": 176,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 61
+  },
+  {
+    "type": "equation",
+    "number": 177,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 61
+  },
+  {
+    "type": "equation",
+    "number": 178,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 61
+  },
+  {
+    "type": "equation",
+    "number": 179,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 61
+  },
+  {
+    "type": "equation",
+    "number": 180,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 61
+  },
+  {
+    "type": "heading",
+    "text": "Local-window Transformer",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 62
+  },
+  {
+    "type": "heading",
+    "text": "CVAE with Graph Neural Operator propagation",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 62
+  },
+  {
+    "type": "heading",
+    "text": "Consistency in longitudinal dynamics",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 62
+  },
+  {
+    "type": "heading",
+    "text": "Direct comparison of local-window Transformer and GNO",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 63
+  },
+  {
+    "type": "heading",
+    "text": "Two-dimensional marginal reconstruction",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 63
+  },
+  {
+    "type": "equation",
+    "number": 181,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 63
+  },
+  {
+    "type": "heading",
+    "text": "Macroparticle-based distributional diagnostics",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 65
+  },
+  {
+    "type": "equation",
+    "number": 182,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 65
+  },
+  {
+    "type": "heading",
+    "text": "Windowed attention and graph-kernel correspondence",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 183,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 184,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 185,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 186,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 187,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 188,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 189,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 67
+  },
+  {
+    "type": "equation",
+    "number": 190,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 191,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 192,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 193,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 194,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 195,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 196,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 197,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 198,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 68
+  },
+  {
+    "type": "equation",
+    "number": 199,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 69
+  },
+  {
+    "type": "equation",
+    "number": 200,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 69
+  },
+  {
+    "type": "equation",
+    "number": 201,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 69
+  },
+  {
+    "type": "equation",
+    "number": 202,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 69
+  },
+  {
+    "type": "equation",
+    "number": 203,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 69
+  },
+  {
+    "type": "equation",
+    "number": 204,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 69
+  },
+  {
+    "type": "heading",
+    "text": "Window-size dependence",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 70
+  },
+  {
+    "type": "equation",
+    "number": 205,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 70
+  },
+  {
+    "type": "equation",
+    "number": 206,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 70
+  },
+  {
+    "type": "equation",
+    "number": 207,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 70
+  },
+  {
+    "type": "heading",
+    "text": "Physics-statistics prediction",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 72
+  },
+  {
+    "type": "equation",
+    "number": 208,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 72
+  },
+  {
+    "type": "heading",
+    "text": "Global comparison of latent propagators",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 72
+  },
+  {
+    "type": "heading",
+    "text": "Conditional latent uncertainty of the CVAE–GNO surrogate",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 74
+  },
+  {
+    "type": "heading",
+    "text": "Fixed-condition ensemble propagation",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 74
+  },
+  {
+    "type": "heading",
+    "text": "Uncertainty of the physical-statistics head",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 77
+  },
+  {
+    "type": "equation",
+    "number": 209,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 77
+  },
+  {
+    "type": "equation",
+    "number": 210,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 77
+  },
+  {
+    "type": "heading",
+    "text": "Held-out-set per-bin diagnostic",
+    "source": "chapters/05_results.tex",
+    "pdf_page": 79
+  },
+  {
+    "type": "equation",
+    "number": 211,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 79
+  },
+  {
+    "type": "equation",
+    "number": 212,
+    "source": "chapters/05_results.tex",
+    "pdf_page": 80
+  },
+  {
+    "type": "heading",
+    "text": "Discussion and perspectives",
+    "source": "chapters/06_discussion_and_perspectives.tex",
+    "pdf_page": 81
+  },
+  {
+    "type": "heading",
+    "text": "Exploratory research and architectural inductive bias",
+    "source": "chapters/06_discussion_and_perspectives.tex",
+    "pdf_page": 81
+  },
+  {
+    "type": "heading",
+    "text": "Conditional latent uncertainty",
+    "source": "chapters/06_discussion_and_perspectives.tex",
+    "pdf_page": 81
+  },
+  {
+    "type": "heading",
+    "text": "Toward accelerator digital twins and optimization",
+    "source": "chapters/06_discussion_and_perspectives.tex",
+    "pdf_page": 82
+  },
+  {
+    "type": "heading",
+    "text": "Limitations",
+    "source": "chapters/06_discussion_and_perspectives.tex",
+    "pdf_page": 82
+  },
+  {
+    "type": "heading",
+    "text": "Conclusion",
+    "source": "chapters/07_conclusion.tex",
+    "pdf_page": 83
+  },
+  {
+    "type": "heading",
+    "text": "Auxiliary theoretical results",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "heading",
+    "text": "Machine-learning preliminaries",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "heading",
+    "text": "Loss minimization and gradient-based training",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "equation",
+    "number": 213,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "equation",
+    "number": 214,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "heading",
+    "text": "Dense neural networks",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "equation",
+    "number": 215,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "equation",
+    "number": 216,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "equation",
+    "number": 217,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "heading",
+    "text": "Convolutional neural networks",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "equation",
+    "number": 218,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 89
+  },
+  {
+    "type": "heading",
+    "text": "Autoencoders",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 219,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 220,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 221,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 222,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "heading",
+    "text": "Variational and conditional autoencoders",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 223,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 224,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 225,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 226,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 227,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "equation",
+    "number": 228,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 90
+  },
+  {
+    "type": "heading",
+    "text": "Key theoretical guarantees",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 91
+  },
+  {
+    "type": "equation",
+    "number": 229,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 91
+  },
+  {
+    "type": "equation",
+    "number": 230,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 91
+  },
+  {
+    "type": "heading",
+    "text": "Discretization invariance of neural operators",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 91
+  },
+  {
+    "type": "equation",
+    "number": 231,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 91
+  },
+  {
+    "type": "equation",
+    "number": 232,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "equation",
+    "number": 233,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "heading",
+    "text": "Uniform approximation of continuous operators",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "equation",
+    "number": 234,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "equation",
+    "number": 235,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "equation",
+    "number": 236,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "equation",
+    "number": 237,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 92
+  },
+  {
+    "type": "equation",
+    "number": 238,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "equation",
+    "number": 239,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "heading",
+    "text": "Approximation in expected risk",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "equation",
+    "number": 240,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "equation",
+    "number": 241,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "equation",
+    "number": 242,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "equation",
+    "number": 243,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "equation",
+    "number": 244,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 93
+  },
+  {
+    "type": "heading",
+    "text": "Fourier neural operator universality",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "equation",
+    "number": 245,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "heading",
+    "text": "Conditional variational lower bound",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "equation",
+    "number": 246,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "equation",
+    "number": 247,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "equation",
+    "number": 248,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "equation",
+    "number": 249,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "equation",
+    "number": 250,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 94
+  },
+  {
+    "type": "heading",
+    "text": "Exact causal and local-support guarantees",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "equation",
+    "number": 251,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "equation",
+    "number": 252,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "equation",
+    "number": 253,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "equation",
+    "number": 254,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "heading",
+    "text": "Graph support and message-passing locality",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "equation",
+    "number": 255,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "equation",
+    "number": 256,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 95
+  },
+  {
+    "type": "heading",
+    "text": "Combined discretization–approximation error decomposition",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 96
+  },
+  {
+    "type": "equation",
+    "number": 257,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 96
+  },
+  {
+    "type": "heading",
+    "text": "Prospective wake reconstruction from Haïssinski profiles",
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 96
+  },
+  {
+    "type": "equation",
+    "number": 258,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 96
+  },
+  {
+    "type": "equation",
+    "number": 259,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 96
+  },
+  {
+    "type": "equation",
+    "number": 260,
+    "source": "appendices/auxiliary_theoretical_results.tex",
+    "pdf_page": 96
+  },
+  {
+    "type": "heading",
+    "text": "Declaration of originality and absence of plagiarism",
+    "source": "appendices/declaration_of_originality.tex",
+    "pdf_page": 97
+  }
+]

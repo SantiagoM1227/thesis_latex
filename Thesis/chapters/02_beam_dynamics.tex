@@ -1,0 +1,247 @@
+% Reconstructed semantic LaTeX: editable paragraphs, equations, figures and citations.
+
+\chapter{Beam dynamics}
+\label{sec:02_beam_dynamics_beam_dynamics}
+
+\section{Linear and Nonlinear beam dynamics}
+\label{sec:02_beam_dynamics_linear_and_nonlinear_beam_dynamics}
+
+Considering the theoretical description of a charged particle through a series of lattice elements, in the absence of collective forces and strong nonlinearities, its coordinates \(\xi_{j}\) at the entrance of element \(j\) are mapped to the coordinates \(\xi_{j + 1}\) at the exit of the element by
+
+\begin{equation}
+\label{eq:4}
+\xi_{j+1}=\Phi_{j,\mu_j}(\xi_j),
+\end{equation}
+
+where \(\mu_{j}\) contains the local element parameters. In the linear approximation, \(\Phi_{j , \mu_{j}} ( \xi ) =\) \(M_{j} ( \mu_{j} ) \xi\) and a sequence of \(N\) elements gives
+
+\begin{equation}
+\label{eq:5}
+\xi_N=M_{N-1}\cdots M_1M_0\xi_0.
+\end{equation}
+
+At the distribution level, the corresponding evolution is the pushforward
+
+\begin{equation}
+\label{eq:6}
+\rho_{j+1}=(M_j)_{\#}\rho_j,
+\end{equation}
+
+defined weakly by the following the Liouville’s theorem condition for all suitable test functions
+
+\begin{equation}
+\label{eq:7}
+\int\varphi(\xi)\,\mathrm{d}(M_j)_{\#}\rho_j(\xi)=\int\varphi(M_j\xi)\,\mathrm{d}\rho_j(\xi).
+\end{equation}
+
+The dynamics of intense charged-particle beams in circular accelerators cannot generally be described by independent single-particle motion alone. The beam interacts with the surrounding vacuum chamber and accelerator components, generating electromagnetic fields that act back on trailing particles. The time-domain response is described by wake functions, while the frequency-domain response is described by the beam coupling impedance. Together, wakefields and impedance determine energy loss, tune shifts, emittance growth, bunch lengthening, and the onset of collective instabilities \cite{metral2021wake}.
+
+If \(\lambda ( z )\) denotes the normalized longitudinal line density of a bunch, the induced longitudinal wake potential can be written as the convolution
+
+\begin{equation}
+\label{eq:8}
+V_{\parallel}(z)=\int_{-\infty}^{\infty}W_{\parallel}(z-z')\lambda(z')\,\mathrm{d}z'.
+\end{equation}
+
+Similarly, the transverse wake potential is
+
+\begin{equation}
+\label{eq:9}
+V_{\perp}(z)=\int_{-\infty}^{\infty}W_{\perp}(z-z')\lambda(z')\,\mathrm{d}z'.
+\end{equation}
+
+These equations show why collective effects naturally suggest an operator-learning viewpoint: the bunch profile is mapped to an induced field through an integral kernel.
+
+The wake formalism is naturally expressed as a Green-function description of the beamenvironment response. In the rigid-beam and impulse approximations, one focuses on the integrated Lorentz force experienced by a trailing test particle rather than on the instantaneous force during the traversal of the structure. The longitudinal and transverse wake functions, denoted respectively by \(W_{\Vert}\) and \(W_{\perp} ,\) represent the response of the environment to a point-like source charge. In that sense, the wake function is the shock response, or Green kernel, of the beam pipe and its discontinuities. The wake function is associated with the integrated force, and the wake potential is obtained by convolving that Green function with the beam distribution \cite{metral2021wake}.
+
+It is often more convenient to work in the frequency domain because material properties and resonant structures are more naturally characterized spectrally. The longitudinal impedance is the Fourier transform of the longitudinal wake, and similarly for the transverse case. A common convention is
+
+\begin{equation}
+\label{eq:10}
+Z_{\parallel}(\omega)=\frac1c\int_{-\infty}^{\infty}W_{\parallel}(z)e^{i\omega z/c}\,\mathrm{d}z,
+\end{equation}
+
+\begin{equation}
+\label{eq:11}
+Z_{\perp}(\omega)=\frac{i}{c}\int_{-\infty}^{\infty}W_{\perp}(z)e^{i\omega z/c}\,\mathrm{d}z,
+\end{equation}
+
+up to sign conventions. The inverse transforms recover the wake functions. Because the wake is real-valued, the impedance satisfies the Hermitian symmetry relation
+
+\begin{equation}
+\label{eq:12}
+Z^{*}(\omega)=Z(-\omega).
+\end{equation}
+
+This is one of the basic structural properties emphasized in Métral’s discussion on wakefields and impedance \cite{metral2021wake}. A related formulation, written explicitly as inverse Fourier transform relations for wake functions, is \cite{kim2025gpu}:
+
+\begin{equation}
+\label{eq:13}
+W_{\parallel}(\tau_d)=\frac{L}{2\pi}\int_{-\infty}^{\infty}Z_{\parallel}(\omega)e^{-i\omega\tau_d}\,\mathrm{d}\omega,
+\end{equation}
+
+\begin{equation}
+\label{eq:14}
+W_{\perp}(\tau_d)=\frac{iL}{2\pi}\int_{-\infty}^{\infty}Z_{\perp}(\omega)e^{-i\omega\tau_d}\,\mathrm{d}\omega,
+\end{equation}
+
+with \(L\) the effective interaction length and \(\tau_{d}\) the longitudinal delay variable.
+
+A crucial theoretical relation is the Panofsky-Wenzel theorem, connecting longitudinal and transverse wakefields. In one standard form,
+
+\begin{equation}
+\label{eq:15}
+\nabla_{\perp}W_{\parallel}(z,\mathbf r_{\perp})=\frac{\partial}{\partial z}W_{\perp}(z,\mathbf r_{\perp}),
+\end{equation}
+
+or equivalently, in terms of the delay variable \(\tau_{d} ,\)
+
+\begin{equation}
+\label{eq:16}
+\frac1c\frac{\partial}{\partial\tau_d}W_{\perp}=\nabla_{\perp}W_{\parallel}.
+\end{equation}
+
+This theorem follows from Maxwell’s equations under the rigid-beam and impulse approximations and does not require a specific boundary condition. It is therefore one of the most general structural constraints in wakefield theory. In practice, it is used to relate transverse and longitudinal impedances and to check the consistency of numerical or experimental impedance data \cite{metral2021wake}. Kim \cite{kim2025gpu} gives the same relation explicitly as Eq. (3.11) and emphasizes that it is one of the bases of beam-instability analysis.
+
+\section{Longitudinal Beam Dynamics}
+\label{sec:02_beam_dynamics_longitudinal_beam_dynamics}
+
+Considering the simplified case for longitudinal beam dynamics, we write the system as a Hamiltonian system. With \(z\) the longitudinal position relative to the synchronous particle and \(\delta\) the relative energy deviation, a simplified dynamical formulation is the following
+
+\begin{equation}
+\label{eq:17}
+z'=-\eta\delta,\qquad\delta'=K(z),
+\end{equation}
+
+where \(\eta\) is the phase-slip factor and \(K ( z )\) is the longitudinal restoring force. In the conservative limit, the distribution \(\psi ( z , \delta , s )\) satisfies the Vlasov equation
+
+\begin{equation}
+\label{eq:18}
+\frac{\partial\psi}{\partial s}-\eta\delta\frac{\partial\psi}{\partial z}+K(z)\frac{\partial\psi}{\partial\delta}=0,
+\end{equation}
+
+or, equivalently,
+
+\begin{equation}
+\label{eq:19}
+\frac{\partial\psi}{\partial s}+\{\psi,H\}=0.
+\end{equation}
+
+This formulation describes explicitly Liouville’s theorem and the incompressibility of phase-space flow. By following this approach, the Vlasov equation is the starting point for many analytical and numerical studies of collective effects, including linear stability analysis, mode decomposition, and perturbative treatments of wakefield-induced instabilities.
+
+When considering a more complete description including synchrotron-radiation damping and quantum excitation, the resulting kinetic model has Vlasov–Fokker–Planck form,
+
+\begin{equation}
+\label{eq:20}
+\frac{\partial\psi}{\partial s}-\eta\delta\frac{\partial\psi}{\partial z}+K(z)\frac{\partial\psi}{\partial\delta}=\frac{2}{c\tau_z}\frac{\partial}{\partial\delta}\left(\delta\psi+\sigma_{\delta}^2\frac{\partial\psi}{\partial\delta}\right),
+\end{equation}
+
+where \(\tau_{z}\) is the longitudinal damping time and \(\sigma_{\delta}\) the equilibrium energy spread. The righthand side introduces relaxation and diffusion, making stationary distributions possible. Below the microwave-instability threshold, the stationary solution of the Vlasov-Fokker-Planck equation is given by the Haïssinski equation. In the formulation given by Zhou et al.\cite{zhou2023haissinski}, the equilibrium line density \(\lambda_{h} ( z )\) satisfies
+
+\begin{equation}
+\label{eq:21}
+\frac{\mathrm{d}\lambda_h(z)}{\mathrm{d}z}+\left[\frac{z}{\sigma_{z0}^2}-\frac{1}{\eta\sigma_{\delta}^2}F_h(z)\right]\lambda_h(z)=0,
+\end{equation}
+
+where \(F_{h} ( z )\) is the longitudinal wake force generated self-consistently by the bunch itself. Its explicit solution can be written
+
+\begin{equation}
+\label{eq:22}
+\lambda_h(z)=A\exp\left[-\frac{z^2}{2\sigma_{z0}^2}-\frac{I}{\sigma_{z0}}\int_z^{\infty}W_k(z')\,\mathrm{d}z'\right],
+\end{equation}
+
+with normalization constant \(A\) such that
+
+\begin{equation}
+\label{eq:23}
+\int_{-\infty}^{\infty}\lambda_h(z)\,\mathrm{d}z=1,
+\end{equation}
+
+and bunch wake potential
+
+\begin{equation}
+\label{eq:24}
+W_k(z)=\int_{-\infty}^{\infty}W_k(z-z')\lambda_h(z')\,\mathrm{d}z'.
+\end{equation}
+
+With this formulation, it is clear that the natural RF Gaussian confinement is modified by the self-induced wake potential, and the stationary bunch profile is the Boltzmann-like density corresponding to that deformed effective potential.
+
+\section{Distribution-level Beam Dynamics}
+\label{sec:02_beam_dynamics_distribution_level_beam_dynamics}
+
+The full dimensionality study of the dynamics can be considered by studying macroparticles in six-dimensional phase space, derived from the canonical coordinates \(( x , p_{x} , y , p_{y} , \zeta , \delta ) ,\) where \(x\) and \(y\) are the transverse positions, \(p_{x}\) and \(p_{y}\) are the corresponding momenta, \(\zeta\) is the longitudinal position relative to the synchronous particle, and \(\delta\) is the relative energy deviation. The state vector is
+
+\begin{equation}
+\label{eq:25}
+\xi=(x,p_x,y,p_y,\zeta,\delta)\in\mathbb{R}^6.
+\end{equation}
+
+\subsection{Statistical descriptors and beam-size convention}
+\label{sec:02_beam_dynamics_statistical_descriptors_and_beam_size_convention}
+
+For a cloud of \(N_{p}\) macroparticles, the coordinate-wise centroid and RMS spread used throughout this work are the empirical first and centred second moments,
+
+\begin{equation}
+\label{eq:26}
+m_i=\frac1{N_p}\sum_{n=1}^{N_p}\xi_{n,i},\qquad\sigma_i=\left[\frac1{N_p}\sum_{n=1}^{N_p}(\xi_{n,i}-m_i)^2\right]^{1/2}.
+\end{equation}
+
+The symbol \(\sigma_{i}\) therefore denotes the RMS spread of the statistical distribution of coordinate \(\xi_{i} .\) This definition requires a finite second moment but does not assume a Gaussian distribution. For non-Gaussian beams, the centroid and RMS spread do not fully characterize tails, asymmetry, multimodality, or higher-order correlations. Those features are retained partially by the pairwise histograms introduced in Chapter 3, quantiles are not supplied as additional model inputs in the present study.
+
+The term beam size is used more narrowly for a transverse position coordinate. In uncoupled linear optics, and neglecting correlations between betatron motion and relative momentum deviation, the projected horizontal RMS beam size satisfies
+
+\begin{equation}
+\label{eq:27}
+\sigma_x^2=\beta_x\varepsilon_x+D_x^2\sigma_{\delta}^2,
+\end{equation}
+
+where \(\varepsilon_{x}\) is the geometric projected emittance, \(\beta_{x}\) is the Twiss beta function, \(D_{x}\) is the horizontal dispersion, and \(\sigma_{\delta}\) is the RMS relative momentum spread. If the betatron coordinate \(x_{\beta}\) is correlated with \(\delta ,\) the more general decomposition is
+
+\begin{equation}
+\label{eq:28}
+\sigma_x^2=\beta_x\varepsilon_x+2D_x\operatorname{Cov}(x_{\beta},\delta)+D_x^2\sigma_{\delta}^2.
+\end{equation}
+
+An analogous expression applies in the vertical plane. By contrast, \(\sigma_{p_{x}} , \sigma_{p_{y}} , \sigma_{\zeta} ,\) and \(\sigma_{\delta}\) are referred to as coordinate-wise RMS spreads, not as transverse beam sizes. This terminology is used consistently in the data description, model architecture, and results.
+
+For a lattice section with parameters \(\mu ,\) the microscopic dynamics are described by a map
+
+\begin{equation}
+\label{eq:29}
+\Phi_{\mu}:\mathbb{R}^6\to\mathbb{R}^6,\qquad\xi_{\mathrm{out}}=\Phi_{\mu}(\xi_{\mathrm{in}}).
+\end{equation}
+
+At the distribution level, the corresponding density evolution is the pushforward
+
+\begin{equation}
+\label{eq:30}
+\mathcal T_{\mu}[\rho]=(\Phi_{\mu})_{\#}\rho,
+\end{equation}
+
+characterized weakly by
+
+\begin{equation}
+\label{eq:31}
+\int\varphi(\xi)\,\mathrm{d}\mathcal T_{\mu}[\rho](\xi)=\int\varphi(\Phi_{\mu}(\xi))\,\mathrm{d}\rho(\xi)
+\end{equation}
+
+for all suitable test functions \(\varphi .\) When collective effects are included, the map becomes density dependent. A generic continuum description is
+
+\begin{equation}
+\label{eq:32}
+\partial_s\rho+\nabla_{\xi}\cdot\bigl(\mathbf F_{\mathrm{ext}}(\xi,s,\mu)\rho\bigr)+\nabla_{\xi}\cdot\bigl(\mathbf F_{\mathrm{coll}}[\rho](\xi,s,\mu)\rho\bigr)=\mathcal D[\rho],
+\end{equation}
+
+where \(F_{\mathrm{ext}}\) is the external lattice force, \(F_{\mathrm{coll}} [ \rho ]\) is the self-consistent collective force, and \(\mathcal{D}\) denotes damping and diffusion.
+
+A useful conceptual splitting for one lattice section is
+
+\begin{equation}
+\label{eq:33}
+\rho_{j+1}\approx\exp(\Delta s\,\mathcal D_j)\exp\bigl(\Delta s\,\mathcal C_j[\rho_j]\bigr)(M_{j,\mu_j})_{\#}\rho_j,
+\end{equation}
+
+where \(M_{j , \mu_{j}}\) denotes external transport and \(\mathcal{C}_{j}\) the collective generator. By considering this splitting, it is possible to consider the nonlinear operator as the main object of interest for surrogates and to study the collective effects in isolation from the external transport. This is particularly useful for the longitudinal dynamics, where the collective effects are often the dominant source of nonlinearity.
+
+The theoretical relations introduced in this chapter enter the experiments at different levels. The wake convolution and the Haïssinski fixed-point structure motivate the PyColleff longitudinal benchmark and the FNO density-to-density map. The Panofsky–Wenzel theorem constrains the consistency of longitudinal and transverse wake models, but it is not imposed as a loss or architectural identity in the six-dimensional latent surrogate. Likewise, the Haïssinski profile is not used as a checkpoint constraint for the full-lattice Transformer or GNO rollout. The present six-dimensional validation is restricted to the final tracked cloud; a multiturn equilibrium test or an intermediate-position consistency test would require additional simulator outputs that are not contained in the reported dataset.
+

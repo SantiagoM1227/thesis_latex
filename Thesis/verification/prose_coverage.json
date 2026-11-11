@@ -1,0 +1,6 @@
+{
+  "blocks_tested": 150,
+  "mean_trigram_coverage": 0.987070379842995,
+  "low_match_blocks": [],
+  "method": "English three-word sequence coverage across rendered native output; diagnostic, not an identity proof"
+}

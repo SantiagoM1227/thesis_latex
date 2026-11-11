@@ -1,0 +1,459 @@
+% Reconstructed semantic LaTeX: editable paragraphs, equations, figures and citations.
+
+\chapter{Auxiliary theoretical results}
+\label{sec:auxiliary_theoretical_results_auxiliary_theoretical_results}
+
+\section{Machine-learning preliminaries}
+\label{sec:auxiliary_theoretical_results_machine_learning_preliminaries}
+
+This appendix collects standard machine-learning definitions used in the methodology. They are included for completeness but are not specific to the proposed accelerator-surrogate architectures.
+
+\subsection{Loss minimization and gradient-based training}
+\label{sec:auxiliary_theoretical_results_loss_minimization_and_gradient_based_training}
+
+For regression problems, a common objective is the mean-squared error,
+
+\begin{equation}
+\label{eq:213}
+\mathcal L_{\mathrm{MSE}}=\frac1N\sum_{s=1}^{N}\left\|\widehat y^{(s)}-y^{(s)}\right\|_2^2.
+\end{equation}
+
+The parameters are updated iteratively using an estimate of the loss gradient,
+
+\begin{equation}
+\label{eq:214}
+\theta_{k+1}=\theta_k-\eta_k\widehat{\nabla_{\theta}\mathcal L},
+\end{equation}
+
+where \(\eta_{k}\) denotes the learning rate and the gradient is generally estimated from a minibatch of training examples.
+
+\subsection{Dense neural networks}
+\label{sec:auxiliary_theoretical_results_dense_neural_networks}
+
+Let \(h^{( 0 )} = x\) denote the input vector. A dense layer computes
+
+\begin{equation}
+\label{eq:215}
+h^{(\ell+1)}=\sigma\left(W^{(\ell)}h^{(\ell)}+b^{(\ell)}\right),
+\end{equation}
+
+where \(W^{( \ell )}\) and \(b^{( \ell )}\) are trainable parameters and \(\sigma\) is a nonlinear activation. Examples used in modern neural networks include
+
+\begin{equation}
+\label{eq:216}
+\operatorname{ReLU}(x)=\max(0,x),
+\end{equation}
+
+and
+
+\begin{equation}
+\label{eq:217}
+\operatorname{GELU}(x)=\frac x2\left[1+\operatorname{erf}\left(\frac{x}{\sqrt2}\right)\right].
+\end{equation}
+
+A multilayer perceptron is obtained by composing several dense transformations. The nonlinear activations are essential because a composition of affine maps without nonlinearities reduces to a single affine transformation.
+
+\subsection{Convolutional neural networks}
+\label{sec:auxiliary_theoretical_results_convolutional_neural_networks}
+
+For an input feature tensor \(h^{( \ell )} ,\) a two-dimensional convolutional layer computes
+
+\begin{equation}
+\label{eq:218}
+h_{c_{\mathrm{out}}}^{(\ell+1)}(i,j)=\sigma\left[b_{c_{\mathrm{out}}}+\sum_{c_{\mathrm{in}}}\sum_r\sum_q K_{c_{\mathrm{out}},c_{\mathrm{in}}}(r,q)h_{c_{\mathrm{in}}}^{(\ell)}(i-r,j-q)\right],
+\end{equation}
+
+where \(K_{c_{\mathrm{out}} , c_{\mathrm{in}}}\) is a learned kernel. Parameter sharing allows the same local feature to be detected at different spatial positions. Successive layers increase the effective receptive field, while downsampling and upsampling operations permit encoder–decoder constructions.
+
+\subsection{Autoencoders}
+\label{sec:auxiliary_theoretical_results_autoencoders}
+
+An autoencoder consists of an encoder
+
+\begin{equation}
+\label{eq:219}
+\mathcal E_{\phi}:X\longmapsto z
+\end{equation}
+
+and a decoder
+
+\begin{equation}
+\label{eq:220}
+\mathcal D_{\psi}:z\longmapsto\widehat X.
+\end{equation}
+
+The reconstruction is
+
+\begin{equation}
+\label{eq:221}
+\widehat X=\mathcal D_{\psi}(\mathcal E_{\phi}(X)),
+\end{equation}
+
+and a standard deterministic autoencoder can be trained by minimizing
+
+\begin{equation}
+\label{eq:222}
+\mathcal L_{\mathrm{AE}}=\|\widehat X-X\|_2^2.
+\end{equation}
+
+\subsection{Variational and conditional autoencoders}
+\label{sec:auxiliary_theoretical_results_variational_and_conditional_autoencoders}
+
+A variational autoencoder represents each input through an approximate latent posterior. For a diagonal Gaussian posterior,
+
+\begin{equation}
+\label{eq:223}
+q_{\phi}(z\mid X)=\mathcal N\left(\mu_{\phi}(X),\operatorname{diag}\sigma_{\phi}^2(X)\right).
+\end{equation}
+
+Sampling is implemented using the reparameterization
+
+\begin{equation}
+\label{eq:224}
+z=\mu_{\phi}(X)+\sigma_{\phi}(X)\odot\epsilon,\qquad\epsilon\sim\mathcal N(0,I).
+\end{equation}
+
+The VAE objective combines reconstruction and latent-prior regularization,
+
+\begin{equation}
+\label{eq:225}
+\mathcal L_{\mathrm{VAE}}=\mathcal L_{\mathrm{rec}}+\beta D_{\mathrm{KL}}\bigl(q_{\phi}(z\mid X)\Vert p(z)\bigr),
+\end{equation}
+
+where the prior is commonly
+
+\begin{equation}
+\label{eq:226}
+p(z)=\mathcal N(0,I).
+\end{equation}
+
+For a diagonal Gaussian posterior, the non-negative divergence from the unit Gaussian is
+
+\begin{equation}
+\label{eq:227}
+D_{\mathrm{KL}}\bigl(q_{\phi}(z\mid X)\Vert p(z)\bigr)=\frac12\sum_{j=1}^{d_z}\left[\mu_{\phi,j}^2(X)+\sigma_{\phi,j}^2(X)-1-\log\sigma_{\phi,j}^2(X)\right].
+\end{equation}
+
+A conditional variational autoencoder extends the posterior and decoder by introducing
+
+\begin{equation}
+\label{eq:228}
+q_{\phi}(z\mid X,c),\qquad p_{\psi}(X\mid z,c).
+\end{equation}
+
+Conditioning allows known physical or machine variables to contribute explicitly to the latent representation and reconstruction.
+
+\section{Key theoretical guarantees}
+\label{sec:auxiliary_theoretical_results_key_theoretical_guarantees}
+
+The neural-operator results used to motivate the methodology are approximation statements for maps between function spaces, not guarantees about a particular trained checkpoint. Under the hypotheses of Theorem 8 in \cite{kovachki2023operators}, a fixed continuum neural operator has finite-dimensional realisations that converge under mesh refinement, uniformly on compact subsets of the admissible input space. Schematically, for fixed parameters \(\theta ,\)
+
+\begin{equation}
+\label{eq:229}
+\sup_{a\in K}\left\|\widehat{\mathcal G}_{L,\theta}(D_L,a|_{D_L})-\mathcal G_{\theta}(a)\right\|_{\mathcal U}\longrightarrow0\quad(L\to\infty).
+\end{equation}
+
+This is a statement about consistency of the discretised architecture. It does not establish robustness to changing the number of Monte Carlo macroparticles used to estimate an input density.
+
+Likewise, Theorems 11–14 in \cite{kovachki2023operators} provide density results for neural operators under specified domain, function-space, continuity, activation, and measurability hypotheses. On a compact admissible set \(K ,\) the uniform-approximation implication has the form
+
+\begin{equation}
+\label{eq:230}
+\forall\varepsilon>0,\quad\exists\mathcal G_{\theta}:\ \sup_{a\in K}\left\|\mathcal G_{\theta}(a)-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}<\varepsilon.
+\end{equation}
+
+Related FNO-specific approximation results are given in \cite{kovachki2021fno}. These statements are existential: they do not prove that the finite width, retained Fourier modes, optimiser, sample size, or training budget used in this report attain a prescribed error. Because the reported FNO experiment was evaluated on its training-grid resolution, this thesis makes no empirical claim of cross-resolution generalisation.
+
+The architectures considered in this work are motivated not only by empirical performance but also by several approximation, consistency, and structure-preservation results. These guarantees apply at different levels and should therefore be distinguished carefully. Neural-operator theory provides approximation and discretization-consistency results for maps between function spaces; the variational formulation provides a lower-bound identity for the conditional latent model; masked attention imposes exact support constraints on information propagation; and H’enon-type maps preserve symplectic structure by construction. None of these results, however, constitutes a general guarantee of successful optimization, finite-sample generalization, or stable long-horizon autoregressive rollout.
+
+\subsection{Discretization invariance of neural operators}
+\label{sec:auxiliary_theoretical_results_discretization_invariance_of_neural_operators}
+
+The first key property is that the continuum neural-operator architecture is not intrinsically tied to one fixed discretization. The relevant result is more precise than generic resolution invariance.
+
+\textbf{Theorem} \textbf{1} (Discretization invariance; adapted from Theorem 8 of \cite{kovachki2023operators}). \emph{Let} \(D \subset \mathbb{R}^{d}\) \emph{and} \(D^{'} \subset \mathbb{R}^{d^{'}}\) \emph{be} \emph{domains,} \emph{and} \emph{let} \(A\) \emph{and} \(U\) \emph{be} \emph{real-valued} \emph{Banach} \emph{function} \emph{spaces} \emph{on} \(D\) \emph{and} \(D^{'} ,\) \emph{respectively.} \emph{Assume} \emph{that}
+
+\begin{equation}
+\label{eq:231}
+\mathcal A\hookrightarrow C(D),\qquad\mathcal U\hookrightarrow C(D')
+\end{equation}
+
+\emph{continuously,} \emph{and} \emph{let} \emph{the} \emph{activation} \emph{functions} \emph{be} \emph{continuous.} \emph{Then,} \emph{for} \emph{any} \emph{fixed} \emph{neural-} \emph{operator} \emph{depth} \emph{and} \emph{fixed} \emph{parameter} \emph{value} \(\theta ,\) \emph{the} \emph{corresponding} \emph{neural-operator} \emph{class} \emph{is} \emph{discretization-invariant.}
+
+More explicitly, if
+
+\begin{equation}
+\label{eq:232}
+D_1\subset D_2\subset\cdots\subset D
+\end{equation}
+
+is a discrete refinement and \(G_{L , \theta} b\) denotes a finite-dimensional realization of the continuum operator \(G_{\theta} ,\) then for every compact subset \(K \subset A ,\)
+
+\begin{equation}
+\label{eq:233}
+\lim_{L\to\infty}\sup_{a\in K}\left\|\widehat{\mathcal G}_{L,\theta}(D_L,a|_{D_L})-\mathcal G_{\theta}(a)\right\|_{\mathcal U}=0.
+\end{equation}
+
+The important point is that the parameter vector \(\theta\) remains fixed while the discretization is refined. Thus, the statement is stronger than merely accepting arrays of different lengths: the discrete realizations converge to a common continuum operator. This distinction is essential because a finite-dimensional network may be resolution-flexible without possessing a consistent continuum limit.
+
+For the present work, this result provides the theoretical motivation for evaluating operator surrogates under changes in density-grid resolution. It does not, by itself, imply invariance with respect to the number of Monte Carlo macroparticles used to estimate a beam distribution. Particle-number robustness additionally depends on the statistical consistency of the empirical histogram or density estimator used to construct the network input.
+
+\subsection{Uniform approximation of continuous operators}
+\label{sec:auxiliary_theoretical_results_uniform_approximation_of_continuous_operators}
+
+The second central result concerns expressivity in function space. Under the hypotheses established in \cite{kovachki2023operators}, neural operators are dense in appropriate classes of continuous nonlinear operators.
+
+\textbf{Theorem} \textbf{2} (Uniform approximation on compact sets; adapted from Theorem 11 of \cite{kovachki2023operators}). \emph{Let} \(A\) \emph{and} \(U\) \emph{satisfy} \emph{the} \emph{function-space} \emph{assumptions} \emph{of} \emph{\cite{kovachki2023operators};} \emph{in} \emph{particular,} \emph{the} \emph{admissible} \emph{spaces} \emph{include} \emph{appropriate} \(L^{p} ,\) \emph{Sobolev,} \emph{and} \emph{continuous-function} \emph{spaces} \emph{on} \emph{Lipschitz} \emph{domains.} \emph{Let}
+
+\begin{equation}
+\label{eq:234}
+\mathcal G^{\dagger}:\mathcal A\to\mathcal U
+\end{equation}
+
+\emph{be} \emph{continuous,} \emph{and} \emph{let} \(K \subset A\) \emph{be} \emph{compact.} \emph{For} \emph{every} \(\varepsilon >\) 0, \emph{there} \emph{exists} \emph{a} \emph{neural} \emph{operator} \(G_{\theta}\) \emph{such} \emph{that}
+
+\begin{equation}
+\label{eq:235}
+\sup_{a\in K}\left\|\mathcal G_{\theta}(a)-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}<\varepsilon.
+\end{equation}
+
+This theorem is the function-space analogue of finite-dimensional universal approximation. The target is not a vector-valued function
+
+\begin{equation}
+\label{eq:236}
+f:\mathbb R^m\to\mathbb R^n,
+\end{equation}
+
+but an operator
+
+\begin{equation}
+\label{eq:237}
+\mathcal G^{\dagger}:\mathcal A\to\mathcal U
+\end{equation}
+
+between infinite-dimensional spaces. Consequently, it provides the appropriate theoretical setting for learning maps such as
+
+\begin{equation}
+\label{eq:238}
+\lambda_s\longmapsto\lambda_{s+\Delta s},
+\end{equation}
+
+or, more generally,
+
+\begin{equation}
+\label{eq:239}
+\rho_s\longmapsto\rho_{s+\Delta s},
+\end{equation}
+
+when these maps are represented as continuous operators on suitable subsets of the corresponding function spaces.
+
+The theorem is existential. It states that a sufficiently expressive neural operator exists, but it does not specify that a particular finite architecture, fixed channel width, fixed number of Fourier modes, or fixed graph radius attains the desired tolerance.
+
+\subsection{Approximation in expected risk}
+\label{sec:auxiliary_theoretical_results_approximation_in_expected_risk}
+
+Uniform approximation on compact sets is not the only relevant topology. Since model training minimizes an empirical average over samples, an \(L_{\mu}^{2}\) approximation result is particularly pertinent.
+
+\textbf{Theorem} \textbf{3} \(( L_{\mu}^{2}\) density; adapted from Theorem 13 of \cite{kovachki2023operators}). \emph{Let} \(\mu\) \emph{be} \emph{a} \emph{probability} \emph{measure} \emph{on} \emph{the} \emph{input} \emph{function} \emph{space} \(A ,\) \emph{let} \emph{the} \emph{output} \emph{be} \emph{an} \emph{appropriate} \emph{separable} \emph{Hilbert–Sobolev} \emph{space,} \emph{and} \emph{suppose} \emph{that}
+
+\begin{equation}
+\label{eq:240}
+\mathcal G^{\dagger}\in L_{\mu}^{2}(\mathcal A;\mathcal U).
+\end{equation}
+
+\emph{Under} \emph{the} \emph{activation} \emph{and} \emph{function-space} \emph{assumptions} \emph{of} \emph{\cite{kovachki2023operators},} \emph{for} \emph{every} \(\varepsilon >\) 0 \emph{there} \emph{exists} \emph{a} \emph{neural} \emph{operator} \(G_{\theta}\) \emph{such} \emph{that}
+
+\begin{equation}
+\label{eq:241}
+\left\|\mathcal G_{\theta}-\mathcal G^{\dagger}\right\|_{L_{\mu}^{2}(\mathcal A;\mathcal U)}<\varepsilon.
+\end{equation}
+
+\emph{Equivalently,}
+
+\begin{equation}
+\label{eq:242}
+\left(\int_{\mathcal A}\left\|\mathcal G_{\theta}(a)-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}^{2}\,\mathrm d\mu(a)\right)^{1/2}<\varepsilon.
+\end{equation}
+
+This result is conceptually aligned with the population-risk objective
+
+\begin{equation}
+\label{eq:243}
+\mathcal R(\theta)=\mathbb E_{a\sim\mu}\left[\left\|\mathcal G_{\theta}(a)-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}^{2}\right],
+\end{equation}
+
+which is approximated in practice by the empirical risk
+
+\begin{equation}
+\label{eq:244}
+\widehat{\mathcal R}_N(\theta)=\frac1N\sum_{i=1}^{N}\left\|u^{(i)}-\mathcal G_{\theta}(a^{(i)})\right\|_{\mathcal U}^{2}.
+\end{equation}
+
+The distinction is important. Density in \(L_{\mu}^{2} ( A ; U )\) establishes representational capability with respect to the population measure \(\mu ;\) it does not prove that finite-sample empirical-risk minimization recovers the corresponding optimal parameters.
+
+\subsection{Fourier neural operator universality}
+\label{sec:auxiliary_theoretical_results_fourier_neural_operator_universality}
+
+The longitudinal surrogate uses a Fourier neural operator. In addition to the general neural-operator approximation theory, FNOs possess architecture-specific universality results.
+
+\textbf{Theorem} \textbf{4} (Universal approximation by FNOs, informal; \cite{kovachki2023operators}). \emph{Let} \(G^{\dagger}\) \emph{be} \emph{a} \emph{continuous} \emph{operator} \emph{between} \emph{suitable} \emph{function} \emph{spaces} \emph{on} \emph{a} \emph{compact} \emph{or} \emph{Lipschitz} \emph{domain,} \emph{and} \emph{let} \(K\) \emph{be} \emph{a} \emph{compact} \emph{subset} \emph{of} \emph{the} \emph{input} \emph{space.} \emph{Then,} \emph{under} \emph{the} \emph{hypotheses} \emph{of} \emph{\cite{kovachki2023operators},} \emph{for} \emph{every} \(\varepsilon >\) 0 \emph{there} \emph{exists} \emph{a} \emph{Fourier} \emph{neural} \emph{operator} \(G_{\theta}^{\mathrm{FNO}}\) \emph{such} \emph{that}
+
+\begin{equation}
+\label{eq:245}
+\sup_{a\in K}\left\|\mathcal G_{\theta}^{\mathrm{FNO}}(a)-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}<\varepsilon.
+\end{equation}
+
+The same work derives explicit approximation-rate results for particular PDE solution operators, including Darcy-type elliptic problems and incompressible Navier–Stokes equations. These problem-specific rates are significant because they show that universality need not always require an impractically large architecture. They should not, however, be transferred directly to the longitudinal collective-effects problem considered here: no corresponding complexity bound is established in this work for the beam-dynamics operator.
+
+\subsection{Conditional variational lower bound}
+\label{sec:auxiliary_theoretical_results_conditional_variational_lower_bound}
+
+The CVAE component has a probabilistic guarantee based on an exact decomposition of the conditional log evidence. Let \(x\) denote the beam representation, \(c\) the conditioning information, and \(z\) the latent variable. For an approximate posterior
+
+\begin{equation}
+\label{eq:246}
+q_{\phi}(z\mid x,c),
+\end{equation}
+
+the conditional log likelihood satisfies
+
+\begin{equation}
+\label{eq:247}
+\begin{aligned}\log p_{\theta}(x\mid c)&=\mathcal L_{\mathrm{ELBO}}(x,c;\theta,\phi)\\&\quad+D_{\mathrm{KL}}\bigl(q_{\phi}(z\mid x,c)\Vert p_{\theta}(z\mid x,c)\bigr),\end{aligned}
+\end{equation}
+
+where
+
+\begin{equation}
+\label{eq:248}
+\begin{aligned}\mathcal L_{\mathrm{ELBO}}(x,c;\theta,\phi)&=\mathbb E_{q_{\phi}(z\mid x,c)}[\log p_{\theta}(x\mid z,c)]\\&\quad-D_{\mathrm{KL}}\bigl(q_{\phi}(z\mid x,c)\Vert p_{\theta}(z\mid c)\bigr).\end{aligned}
+\end{equation}
+
+Since the Kullback–Leibler divergence is non-negative,
+
+\begin{equation}
+\label{eq:249}
+\mathcal L_{\mathrm{ELBO}}(x,c;\theta,\phi)\le\log p_{\theta}(x\mid c).
+\end{equation}
+
+[Conditional ELBO identity] For any approximate posterior \(q_{\phi} ( z | x , c ) ,\) maximizing the conditional ELBO maximizes a lower bound on the conditional log evidence. For a given pair \(( x , c ) ,\) the bound is tight if and only if
+
+\begin{equation}
+\label{eq:250}
+q_{\phi}(z\mid x,c)=p_{\theta}(z\mid x,c)
+\end{equation}
+
+almost everywhere with respect to the latent-space base measure.
+
+This identity follows from the standard variational argument \cite{kingma2014vae,sohn2015cvae} and provides the probabilistic justification for the reconstruction–KL objective used by the CVAE. It does not guarantee disentanglement, identifiability of the latent coordinates, absence of posterior collapse, or optimality of the chosen finite-dimensional latent representation. These properties must therefore be assessed empirically. When the KL contribution is weighted by a coefficient \(\beta \not =\) 1, the resulting objective is a \(\beta - \mathrm{CVAE}\) objective rather than the standard ELBO itself.
+
+\subsection{Exact causal and local-support guarantees}
+\label{sec:auxiliary_theoretical_results_exact_causal_and_local_support_guarantees}
+
+The causal and windowed attention masks introduce deterministic architectural constraints that hold independently of training.
+
+Let
+
+\begin{equation}
+\label{eq:251}
+\mathcal N_w^{-}(i)=\{j:\max(1,i-w)\le j\le i\}.
+\end{equation}
+
+For one masked attention layer,
+
+\begin{equation}
+\label{eq:252}
+h_i^{(\ell+1)}=F_i^{(\ell)}\left(h_i^{(\ell)},\{h_j^{(\ell)}\}_{j\in\mathcal N_w^{-}(i)}\right).
+\end{equation}
+
+Therefore, in the absence of an additional global bypass,
+
+\begin{equation}
+\label{eq:253}
+\frac{\partial h_i^{(\ell+1)}}{\partial h_j^{(\ell)}}=0,\qquad j\notin\mathcal N_w^{-}(i).
+\end{equation}
+
+This yields the following structural statement.
+
+[Finite one-layer interaction support] A causal attention window of width \(w\) guarantees that a token cannot directly depend on latent states lying outside its directed upstream neighbourhood \(\mathcal{N}_{w}^{-} ( i )\) in a single attention layer.
+
+After \(L\) stacked local layers, dependencies may propagate through successive graph hops. Consequently,
+
+\begin{equation}
+\label{eq:254}
+\mathcal N_w^{-,(L)}(i)\subseteq\{j:0\le i-j\le Lw\},
+\end{equation}
+
+up to boundary effects and assuming no other global communication path.
+
+Thus, local attention does not imply a globally local end-to-end model. Instead, it guarantees local support per interaction layer while permitting longer-range dependence through composition.
+
+\subsection{Graph support and message-passing locality}
+\label{sec:auxiliary_theoretical_results_graph_support_and_message_passing_locality}
+
+An analogous exact support statement holds for the GNO discretization. A graph-kernel layer may be written as
+
+\begin{equation}
+\label{eq:255}
+h_i^{(\ell+1)}=\Psi_i^{(\ell)}\left(h_i^{(\ell)},\sum_{j\in\mathcal N_{\mathrm{GNO}}(i)}\omega_{ij}K_{\theta}^{(\ell)}(\xi_i,\xi_j,h_i^{(\ell)},h_j^{(\ell)},\mu)h_j^{(\ell)}\right).
+\end{equation}
+
+If
+
+\begin{equation}
+\label{eq:256}
+j\notin\mathcal N_{\mathrm{GNO}}(i),
+\end{equation}
+
+then node \(j\) contributes no direct message to node \(i\) in that layer. Consequently, the graph topology gives an exact sparsity pattern for the interaction operator. As with the windowed Transformer, repeated GNO layers enlarge the effective receptive field through successive graph hops.
+
+This establishes the precise sense in which the two architectures share a locality bias: the support restriction is exact, while the learned values of the interaction kernel remain data-dependent.
+
+\subsection{Combined discretization–approximation error decomposition}
+\label{sec:auxiliary_theoretical_results_combined_discretization_approximation_error_decomposition}
+
+The neural-operator framework yields a direct decomposition of the continuum prediction error. Let \(G^{\dagger}\) denote the target physical operator, \(G_{\theta}\) the learned continuum neural operator, and \(G_{L , \theta} b\) its realization on an \(L - \mathrm{point}\) discretization. Then, by the triangle inequality,
+
+\[
+\begin{aligned}
+\left\|\widehat{\mathcal G}_{L,\theta}(D_L,a|_{D_L})-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}
+&\le\left\|\widehat{\mathcal G}_{L,\theta}(D_L,a|_{D_L})-\mathcal G_\theta(a)\right\|_{\mathcal U}\\
+&\quad+\left\|\mathcal G_\theta(a)-\mathcal G^{\dagger}(a)\right\|_{\mathcal U}.
+\end{aligned}
+\]
+
+The two theoretical results act on different terms. Discretization invariance implies that, for fixed \(\theta\) and under the assumptions of the theorem,
+
+\begin{equation}
+\label{eq:257}
+\sup_{a\in K}\left\|\widehat{\mathcal G}_{L,\theta}(D_L,a|_{D_L})-\mathcal G_{\theta}(a)\right\|_{\mathcal U}\to0
+\end{equation}
+
+as \(L \to \infty .\) Universal approximation implies that the second term can be made arbitrarily small over compact subsets by increasing the expressive capacity of the operator class.
+
+\section{Prospective wake reconstruction from Haïssinski profiles}
+\label{sec:auxiliary_theoretical_results_prospective_wake_reconstruction_from_ha_ssinski_profiles}
+
+The following inverse problem is a proposed extension and was not implemented or evaluated in the reported experiments. Under a chosen nondimensionalisation and sign convention, let \(q = z / \sigma_{z 0}\) and let \(\lambda ( q ) >\) 0 be a normalised Haïssinski profile satisfying
+
+\begin{equation}
+\label{eq:258}
+\frac{\mathrm d\lambda}{\mathrm dq}+[q-F(q;\lambda)]\lambda(q)=0,\qquad F(q;\lambda)=I\int_{-\infty}^{\infty}W(q-q')\lambda(q')\,\mathrm dq'.
+\end{equation}
+
+Then
+
+\begin{equation}
+\label{eq:259}
+F(q)=\frac{\mathrm d}{\mathrm dq}\log\lambda(q)+q.
+\end{equation}
+
+Profiles measured or simulated at several currents lead to an inverse convolution problem \cite{zhou2023haissinski,funkner2025wake}. On a uniform grid, one possible regularised estimator is
+
+\begin{equation}
+\label{eq:260}
+\widehat w=\underset{w}{\arg\min}\left\{\frac1M\sum_{n=1}^{M}\left\|\widehat F^{(n)}(w)-F^{(n)}\right\|_2^2+\alpha\|Dw\|_2^2+\beta\|w\|_2^2\right\}.
+\end{equation}
+
+Because differentiating log \(\lambda\) amplifies sampling and measurement noise, any future study must specify smoothing, support, causality, current calibration, and regularisation before interpreting \(w b\) as a reconstructed physical wake.
+

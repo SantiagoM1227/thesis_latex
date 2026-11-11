@@ -1,0 +1,21 @@
+{
+  "compiler": "XeLaTeX + BibTeX",
+  "all_build_commands_succeeded": true,
+  "missing_characters": 0,
+  "unresolved_citations": false,
+  "unresolved_references": false,
+  "duplicate_labels": false,
+  "all_image_references_resolve": true,
+  "all_citation_keys_resolve": true,
+  "tex_source_files": 11,
+  "image_references": 31,
+  "unique_referenced_images": 31,
+  "bibtex_entries": 29,
+  "original_pages": 46,
+  "rebuilt_pages": 46,
+  "native_beamer_frames": 46,
+  "out_of_page_text": [],
+  "pixel_identical": false,
+  "comparison_notes": "Native Beamer reconstruction reflows. Typography, figure positions, block styling and bibliography formatting differ.",
+  "compiled_pdf_sha256": "cf2ba1366839c529c965114736577b2f2b02363280e0f70a8fdba330d5af93ca"
+}

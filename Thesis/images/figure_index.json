@@ -1,0 +1,173 @@
+[
+  {
+    "figure": 1,
+    "name": "beam_pairwise_phase_space_marginals",
+    "source_pdf_page": 28,
+    "images": [
+      "beam_pairwise_phase_space_marginals.png"
+    ]
+  },
+  {
+    "figure": 2,
+    "name": "supervised_learning_workflow",
+    "source_pdf_page": 30,
+    "images": [
+      "supervised_learning_workflow.pdf"
+    ]
+  },
+  {
+    "figure": 3,
+    "name": "cvae_architecture",
+    "source_pdf_page": 44,
+    "images": [
+      "cvae_architecture.pdf"
+    ]
+  },
+  {
+    "figure": 4,
+    "name": "causal_and_windowed_attention_masks",
+    "source_pdf_page": 50,
+    "images": [
+      "causal_and_windowed_attention_masks.pdf"
+    ]
+  },
+  {
+    "figure": 5,
+    "name": "fno_training_validation_losses",
+    "source_pdf_page": 55,
+    "images": [
+      "fno_training_validation_losses.png"
+    ]
+  },
+  {
+    "figure": 6,
+    "name": "fno_longitudinal_reconstruction",
+    "source_pdf_page": 55,
+    "images": [
+      "fno_longitudinal_reconstruction.png"
+    ]
+  },
+  {
+    "figure": 7,
+    "name": "fno_noise_robustness",
+    "source_pdf_page": 56,
+    "images": [
+      "fno_noise_robustness.png"
+    ]
+  },
+  {
+    "figure": 8,
+    "name": "cvae_beam_snapshot_reconstruction",
+    "source_pdf_page": 57,
+    "images": [
+      "cvae_beam_snapshot_reconstruction.png"
+    ]
+  },
+  {
+    "figure": 9,
+    "name": "cvae_latent_physical_correlations",
+    "source_pdf_page": 58,
+    "images": [
+      "cvae_latent_physical_correlations.png"
+    ]
+  },
+  {
+    "figure": 10,
+    "name": "global_transformer_longitudinal_slices",
+    "source_pdf_page": 61,
+    "images": [
+      "global_transformer_longitudinal_slices.png"
+    ]
+  },
+  {
+    "figure": 11,
+    "name": "windowed_transformer_longitudinal_slices",
+    "source_pdf_page": 62,
+    "images": [
+      "windowed_transformer_longitudinal_slices.png"
+    ]
+  },
+  {
+    "figure": 12,
+    "name": "gno_longitudinal_slices",
+    "source_pdf_page": 63,
+    "images": [
+      "gno_longitudinal_slices.png"
+    ]
+  },
+  {
+    "figure": 13,
+    "name": "density_comparison_xy_and_xzeta",
+    "source_pdf_page": 64,
+    "images": [
+      "density_comparison_xy.png",
+      "density_comparison_xzeta.png"
+    ]
+  },
+  {
+    "figure": 14,
+    "name": "density_comparison_xdelta_and_zetadelta",
+    "source_pdf_page": 64,
+    "images": [
+      "density_comparison_xdelta.png",
+      "density_comparison_zetadelta.png"
+    ]
+  },
+  {
+    "figure": 15,
+    "name": "macroparticle_distribution_comparison",
+    "source_pdf_page": 66,
+    "images": [
+      "macroparticle_comparison_xy.png",
+      "macroparticle_comparison_xzeta.png"
+    ]
+  },
+  {
+    "figure": 16,
+    "name": "transformer_window_study",
+    "source_pdf_page": 71,
+    "images": [
+      "transformer_window_study.png"
+    ]
+  },
+  {
+    "figure": 17,
+    "name": "physical_statistics_parity",
+    "source_pdf_page": 73,
+    "images": [
+      "physical_statistics_parity.png"
+    ]
+  },
+  {
+    "figure": 18,
+    "name": "latent_uncertainty_normalized_mass",
+    "source_pdf_page": 75,
+    "images": [
+      "latent_uncertainty_normalized_mass.png"
+    ]
+  },
+  {
+    "figure": 19,
+    "name": "latent_uncertainty_physical_density",
+    "source_pdf_page": 76,
+    "images": [
+      "latent_uncertainty_physical_density.png"
+    ]
+  },
+  {
+    "figure": 20,
+    "name": "latent_variability_rms_and_centroids",
+    "source_pdf_page": 77,
+    "images": [
+      "latent_variability_rms_and_centroids.png"
+    ]
+  },
+  {
+    "figure": 21,
+    "name": "heldout_uncertainty_per_bin",
+    "source_pdf_page": 79,
+    "images": [
+      "heldout_uncertainty_per_bin.png"
+    ]
+  }
+]

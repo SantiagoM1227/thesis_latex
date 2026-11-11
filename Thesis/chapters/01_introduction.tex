@@ -1,0 +1,52 @@
+% Reconstructed semantic LaTeX: editable paragraphs, equations, figures and citations.
+
+\chapter{Introduction}
+\label{sec:01_introduction_introduction}
+
+\section{Motivation}
+\label{sec:01_introduction_motivation}
+
+Collective effects are among the main performance-limiting phenomena in modern circular accelerators. As the beam intensity increases, the beam can no longer be described as a collection of independent particles evolving only under externally applied electromagnetic fields. Instead, the beam interacts with its environment and with itself through wake fields, impedance, space charge, radiation effects, and other collective mechanisms. These interactions may lead to emittance growth, coherent tune shifts, bunch lengthening, coupled-bunch motion, transverse mode coupling, and single-bunch instabilities. The wakefield and impedance formalisms therefore provide the standard language for describing beam–environment interactions and for assessing the stability margins of a machine \cite{metral2021wake}.
+
+These questions are particularly relevant in the context of the Future Circular Collider for electrons and positrons (FCC-ee), a proposed high-luminosity machine designed to operate over a broad energy range and to deliver precision measurements of the \(Z , W ,\) and Higgs bosons, as well as of the top quark. Within this complex, the High-Energy Booster (HEB) is a key element of the injector chain, responsible for accumulating and ramping beams to collider operating energies while preserving beam quality. Even if the booster bunch population is lower than that of the collider rings, collective effects at injection remain a significant concern, especially when resistive-wall effects, transverse coupled-bunch motion, wakefields, space charge, intrabeam scattering, and synchrotron-radiation effects interact within the same dynamical system \cite{ghribi2026collective}.
+
+A reliable study of these effects generally requires multi-particle tracking over many turns, together with detailed impedance and wakefield models. Such simulations are indispensable because collective instabilities arise from the coupling of many degrees of freedom and from the non-trivial interplay between machine optics, beam parameters, feedback systems, and material properties. However, this level of fidelity comes at substantial computational cost. Parameter scans over intensity, RF settings, vacuum chamber properties, optics choices, and impedance scaling are therefore difficult to perform exhaustively. This creates a natural motivation for surrogate modelling: one seeks a learned approximation that is much cheaper to evaluate than the original simulator while preserving the physical information required for exploratory studies, stability scans, and design-space reduction.
+
+Machine learning has recently become an important tool in accelerator physics, with applications including diagnostics, optics correction, anomaly detection, online optimization, and surrogate modelling of numerical simulations \cite{arpaia2021machine,roussel2024bayesian}. In the present work, the objective is not to replace high-fidelity tracking codes. Rather, the objective is to investigate whether machine-learning models can learn reduced representations of collective beam dynamics accurately enough to accelerate exploration and to reveal which architectural biases are appropriate for high-dimensional beam-distribution evolution.
+
+Preliminary results from the associated FCC-ee HEB impedance and surrogate-modelling study were disseminated in the JACoW proceedings of IPAC 2026 \cite{ghribi2026updates}. The present thesis provides the complete methodological development, validation, and limitations of that exploratory contribution.
+
+\section{Problem statement}
+\label{sec:01_introduction_problem_statement}
+
+The central object of this report is the evolution of a beam distribution in six-dimensional phase space. Let
+
+\begin{equation}
+\label{eq:1}
+\xi=(x,p_x,y,p_y,\zeta,\delta)\in\mathbb{R}^6
+\end{equation}
+
+denote the transverse and longitudinal phase-space coordinates, and let \(\rho_{s} ( \xi )\) be the beam density at longitudinal position or turn index \(s .\) For fixed machine and collective-effect parameters \(\mu ,\) the ideal target is a nonlinear evolution operator
+
+\begin{equation}
+\label{eq:2}
+\mathcal{G}_{\Delta s,\mu}:\rho_s\mapsto\rho_{s+\Delta s}.
+\end{equation}
+
+When collective effects are absent, this operator reduces to the pushforward of the distribution under a single-particle lattice map. When collective effects are present, the force depends on the distribution itself and the operator becomes nonlinear. Equation~\eqref{eq:2} defines the ideal operator family, but the empirical six-dimensional study carried out here is narrower. The available tracking data contain only an upstream cloud and one downstream cloud after the complete modelled lattice section. The validated target is therefore the fixed endpoint map
+
+\begin{equation}
+\label{eq:3}
+\mathcal{G}_{L,\mu}:\rho_{\mathrm{in}}\mapsto\rho_{\mathrm{out}},
+\end{equation}
+
+where \(L\) is the full propagation length represented in the dataset. No ground-truth snapshots are available at intermediate lattice positions, so accuracy for arbitrary \(\Delta s\) and physical validity of internal latent states are not established. Within this scope, the research question can be stated as follows:
+
+Can the evolution of high-dimensional beam distributions, generated by expensive
+
+tracking and collective-effects simulations, be approximated by learned surrogate
+
+operators that preserve the physically relevant structure of the beam dynamics?
+
+The exploratory nature of the project is important. Several architectures were investigated as different inductive biases for approximating related endpoint operators. In particular, the work compares spectral operator learning for reduced longitudinal profiles with latent sequence modelling, local-window attention, and graph-kernel message passing for the six-dimensional input-to-output task. The main conclusion is limited to the evaluated configurations: structured local support is a useful architectural prior for the endpoint latent-propagation problem, not proof that the underlying beam dynamics are strictly local or that the learned internal rollout is a physically resolved trajectory.
+

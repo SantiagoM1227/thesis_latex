@@ -1,0 +1,109 @@
+{
+  "rasters": {
+    "37": "paris_saclay_logo",
+    "39": "sapienza_logo",
+    "40": "lascala_logo",
+    "41": "erasmus_logo",
+    "42": "ganil_logo",
+    "43": "ijclab_logo",
+    "204": "cvae_reconstruction_xy",
+    "205": "cvae_reconstruction_xzeta",
+    "228": "attention_illustration",
+    "238": "global_transformer_longitudinal_slices",
+    "247": "windowed_transformer_longitudinal_slices",
+    "270": "fno_longitudinal_reconstruction",
+    "290": "gno_longitudinal_slices",
+    "312": "physical_statistics_stacked_residuals",
+    "320": "fixed_sample_latent_ensemble_diagnostics",
+    "327": "heldout_uncertainty_per_bin",
+    "350": "thank_you_character_left",
+    "351": "thank_you_character_right",
+    "410": "beam_pairwise_phase_space_marginals",
+    "418": "latent_physical_correlations",
+    "434": "transformer_window_study",
+    "448": "latent_variability_rms_and_centroids"
+  },
+  "vector_figures": {
+    "fcc_ee_heb_injection_chain": [
+      3,
+      [
+        231,
+        65,
+        433,
+        215
+      ]
+    ],
+    "tmci_y_plane_waterfall": [
+      5,
+      [
+        28,
+        67,
+        205,
+        215
+      ]
+    ],
+    "beam_surrogate_pipeline": [
+      7,
+      [
+        19,
+        60,
+        435,
+        96
+      ]
+    ],
+    "lattice_tokenization": [
+      9,
+      [
+        233,
+        67,
+        433,
+        151
+      ]
+    ],
+    "causal_attention_flow": [
+      10,
+      [
+        233,
+        50,
+        433,
+        177
+      ]
+    ],
+    "global_causal_attention_graph": [
+      11,
+      [
+        235,
+        61,
+        426,
+        94
+      ]
+    ],
+    "local_window_attention_graph": [
+      12,
+      [
+        235,
+        61,
+        426,
+        91
+      ]
+    ],
+    "gno_directed_graph": [
+      16,
+      [
+        235,
+        61,
+        426,
+        92
+      ]
+    ],
+    "windowed_attention_and_gno_graphs": [
+      17,
+      [
+        233,
+        64,
+        433,
+        140
+      ]
+    ]
+  }
+}

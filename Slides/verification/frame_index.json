@@ -1,0 +1,202 @@
+[
+  {
+    "original_frame": 2,
+    "title": "The presentation separates established physics from the work developed in this work",
+    "source": "sections/01_context_and_beam_physics.tex"
+  },
+  {
+    "original_frame": 3,
+    "title": "The FCC-ee HEB must preserve beam quality while ramping through a 90.7 km accelerator complex",
+    "source": "sections/01_context_and_beam_physics.tex"
+  },
+  {
+    "original_frame": 4,
+    "title": "Collective forces make beam transport a nonlinear operator on the distribution",
+    "source": "sections/01_context_and_beam_physics.tex"
+  },
+  {
+    "original_frame": 5,
+    "title": "High-particle tracking is cheap once, but repeated scans turn it into a CPU-budget problem",
+    "source": "sections/01_context_and_beam_physics.tex"
+  },
+  {
+    "original_frame": 6,
+    "title": "The 6D learning set contains 2048 paired full-lattice Xsuite trajectories with fixed splits",
+    "source": "sections/02_data_and_representation.tex"
+  },
+  {
+    "original_frame": 7,
+    "title": "The pipeline separates sampled 6D shape from the physical position and scale of the beam",
+    "source": "sections/02_data_and_representation.tex"
+  },
+  {
+    "original_frame": 8,
+    "title": "The CVAE compresses projected shape while conditioning keeps known beam information explicit",
+    "source": "sections/02_data_and_representation.tex"
+  },
+  {
+    "original_frame": 9,
+    "title": "The CVAE is a stochastic encoder-decoder that learns a posterior distribution over a latent space",
+    "source": "sections/02_data_and_representation.tex"
+  },
+  {
+    "original_frame": 10,
+    "title": "Attention  might not be  All You Need , but it is a powerful tool for sequence modeling",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 11,
+    "title": "Global causal attention respects lattice order but permits dense upstream mixing",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 12,
+    "title": "Restricting direct attention support improves the endpoint task without changing the representation",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 13,
+    "title": "Neural operators match the mathematical type of distribution evolution",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 14,
+    "title": "FNO is a controlled longitudinal benchmark because wake response is already spectral",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 15,
+    "title": "A GNO represents lattice propagation as a learned kernel on a directed graph",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 16,
+    "title": "The selected CVAE\u2013GNO checkpoint gives the lowest observed endpoint error and neural inference time",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 17,
+    "title": "Windowed attention and GNO differ mainly in kernel parameterization and graph support",
+    "source": "sections/03_latent_propagators.tex"
+  },
+  {
+    "original_frame": 18,
+    "title": "Structured propagators reduce the observed endpoint error, but the numerical ranking is descriptive",
+    "source": "sections/04_results_and_uncertainty.tex"
+  },
+  {
+    "original_frame": 19,
+    "title": "A separate statistics head tests whether normalized shape can be returned to physical coordinates",
+    "source": "sections/04_results_and_uncertainty.tex"
+  },
+  {
+    "original_frame": 20,
+    "title": "For one fixed sample, prediction bias is much larger than the conditional latent spread",
+    "source": "sections/04_results_and_uncertainty.tex"
+  },
+  {
+    "original_frame": 21,
+    "title": "The held-out diagnostic remains under-dispersed even where absolute variance is largest",
+    "source": "sections/04_results_and_uncertainty.tex"
+  },
+  {
+    "original_frame": 22,
+    "title": "Structured operator support is promising, while representation and uncertainty remain the main limits",
+    "source": "sections/05_conclusions.tex"
+  },
+  {
+    "original_frame": 23,
+    "title": "The complete 6D result is traceable to public code, fixed data splits and archived machine inputs",
+    "source": "sections/05_conclusions.tex"
+  },
+  {
+    "original_frame": 24,
+    "title": "Thank you",
+    "source": "sections/05_conclusions.tex"
+  },
+  {
+    "original_frame": 30,
+    "title": "Fifteen pairwise marginals preserve useful structure but do not determine the full 6D joint density",
+    "source": "appendices/representation_and_operator_theory.tex"
+  },
+  {
+    "original_frame": 31,
+    "title": "The latent coordinates show no pervasive linear alignment with the 12 explicit beam statistics",
+    "source": "appendices/representation_and_operator_theory.tex"
+  },
+  {
+    "original_frame": 32,
+    "title": "Windowed attention is a GNO with a normalized exponential kernel",
+    "source": "appendices/representation_and_operator_theory.tex"
+  },
+  {
+    "original_frame": 33,
+    "title": "The single-seed window sweep has a non-monotonic minimum at intermediate support",
+    "source": "appendices/representation_and_operator_theory.tex"
+  },
+  {
+    "original_frame": 34,
+    "title": "The reported variance measures sensitivity to CVAE posterior sampling at fixed input and fixed weights",
+    "source": "appendices/representation_and_operator_theory.tex"
+  },
+  {
+    "original_frame": 35,
+    "title": "Latent sampling does not cover the dominant energy-spread error of the physical-statistics head",
+    "source": "appendices/representation_and_operator_theory.tex"
+  },
+  {
+    "original_frame": 36,
+    "title": "The archived Xsuite dataset fixes the generation chain and train\u2013validation\u2013test split",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 37,
+    "title": "Each lattice token contains seven normalized physical parameters",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 38,
+    "title": "The PyColleff task is a separate controlled longitudinal benchmark",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 39,
+    "title": "Normalized mass becomes physical density only after coordinate scales define the bin areas",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 40,
+    "title": "The CVAE and endpoint propagators use different objectives",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 41,
+    "title": "The reported metrics probe complementary properties of the reconstructed distribution",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 42,
+    "title": "The full window table confirms the same single-seed non-monotonic trend",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 43,
+    "title": "The complete fixed-sample uncertainty table separates latent spread from ensemble-mean discrepancy",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 44,
+    "title": "The nominal Xsuite-to-GNO ratio is about , not a controlled simulator speed-up",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 45,
+    "title": "The main beam-physics identities are not hard constraints in the present surrogate",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  },
+  {
+    "original_frame": 46,
+    "title": "A reliable accelerator surrogate requires checkpoint supervision, broader 6D representations and calibrated uncertainty",
+    "source": "appendices/data_training_and_diagnostics.tex"
+  }
+]

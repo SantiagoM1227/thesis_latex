@@ -1,0 +1,36 @@
+\usepackage{fontspec}
+\setmainfont[Path=fonts/,BoldFont=LatinModernRoman-Bold.otf,ItalicFont=LatinModernRoman-Italic.otf,BoldItalicFont=LatinModernRoman-BoldItalic.otf]{LatinModernRoman-Regular.otf}
+\setsansfont[Path=fonts/]{LatinModernSans-Regular.otf}
+\setmonofont[Path=fonts/]{LatinModernMono-Regular.otf}
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{unicode-math}
+\setmathfont[Path=fonts/]{LatinModernMath.otf}
+\setmathfont[Path=fonts/,version=bold]{LatinModernMath.otf}
+\usepackage[left=3cm,right=2.5cm,top=3cm,bottom=2.5cm,headheight=14pt]{geometry}
+\usepackage{graphicx,booktabs,longtable,array,adjustbox,float,caption}
+\graphicspath{{images/}}
+\usepackage{xcolor,fancyhdr,lastpage,titlesec,chngcntr}
+\definecolor{accent}{RGB}{230,35,100}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\scriptsize\itshape Santiago Martinez Saenz}
+\fancyhead[R]{\scriptsize\itshape Master's Thesis}
+\fancyfoot[L]{\scriptsize\itshape Université Paris-Saclay 2026}
+\fancyfoot[R]{\scriptsize\thepage\,/\,\textcolor{accent}{\pageref*{LastPage}}}
+\renewcommand{\headrulewidth}{.3pt}\renewcommand{\footrulewidth}{0pt}
+\titleclass{\chapter}{straight}
+\titleformat{\chapter}{\normalfont\Large\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\counterwithout{equation}{chapter}\counterwithout{figure}{chapter}\counterwithout{table}{chapter}
+\renewcommand{\figurename}{Fig.}\renewcommand{\tablename}{Tab.}
+\captionsetup{labelsep=colon,font=small}
+\setcounter{table}{3}
+\setlength{\parindent}{1.5em}\setlength{\parskip}{0pt}
+\linespread{1.2}
+\setlength{\emergencystretch}{2em}
+\allowdisplaybreaks[1]
+\usepackage[numbers,sort&compress]{natbib}
+\bibliographystyle{unsrtnat}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=accent,urlcolor=accent]{hyperref}
+\hypersetup{pdftitle={Exploratory modelling of collective effects in the FCC-ee High-Energy Booster using machine learning},pdfauthor={Santiago Martinez Saenz}}

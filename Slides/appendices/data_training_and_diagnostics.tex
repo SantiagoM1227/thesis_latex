@@ -1,0 +1,214 @@
+\section{Data, training and diagnostics}
+% Original presentation frame 36
+\begin{frame}[t,shrink=5]{The archived Xsuite dataset fixes the generation chain and train–validation–test split}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Full-lattice chain}
+FCC-ee HEB MAD-X optics $\to$ cpymad $\to$ Xtrack 0.48.4 \ensuremath{+} PyWIT impedance/wake model $\to (Z_{\rm in},\mu,Z_{\rm out})$.
+\[\mathcal D_{\rm track}=\left\{\left(Z_{\rm in}^{(s)},\mu^{(s)},Z_{\rm out}^{(s)}\right)\right\}_{s=1}^{2048}.\]
+Only the upstream and final downstream clouds are stored.
+\end{block}
+
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{block}{Archive content}
+Fixed split indices, 4096 retained particles/cloud, data-generation and preprocessing scripts, environment, lattice source/checksum, parameter ranges/units, array manifest.
+\end{block}
+
+\end{column}
+\end{columns}
+
+\sources{\parencite{martinez2026code,martinez2026dataset}.}
+
+\end{frame}
+
+% Original presentation frame 37
+\begin{frame}[t,shrink=5]{Each lattice token contains seven normalized physical parameters}
+\[\mu_i=(L_i,K_{1,i},K_{2,i},\phi_i,V_{{\rm rf},i},f_{{\rm rf},i},\varphi_{{\rm rf},i})\in\mathbb R^7.\]\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lll}\toprule Quantity & Meaning & Pre-embedding scaling\\\midrule
+$L_i$ & element length & $L_i/(1\,\mathrm m)$\\
+$K_{1,i}$ & quadrupole strength & $K_{1,i}/(10\,\mathrm m^{-2})$\\
+$K_{2,i}$ & sextupole strength & $K_{2,i}/(10\,\mathrm m^{-3})$\\
+$\phi_i$ & bending angle & $\phi_i/(2\pi)$\\
+$V_{{\rm rf},i}$ & RF voltage & $\log(1+V_{{\rm rf},i})$\\
+$f_{{\rm rf},i}$ & RF frequency & $\log(1+f_{{\rm rf},i})$\\
+$\varphi_{{\rm rf},i}$ & RF phase & $\varphi_{{\rm rf},i}/(2\pi)$\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}
+\sources{\parencite{wang2026latent}.}
+
+\end{frame}
+
+% Original presentation frame 38
+\begin{frame}[t,shrink=5]{The PyColleff task is a separate controlled longitudinal benchmark}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Fixed configuration}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lr}\toprule Ring energy & 3 GeV\\Grid & $N_\zeta=2048$\\Resonator quality factor & $Q=10^4$\\Relaxation steps & $K=3$\\Under-relaxation & $\alpha=0.7$\\Samples & 2048\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}
+\end{block}
+
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{block}{Uniform conditioning ranges}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lr}\toprule $I_b$ & [200,350] A\\$R$ & [5,12] mm\\$t_{\rm NEG}$ & [1,3] $\mu$m\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}
+\end{block}
+
+\end{column}
+\end{columns}
+
+\sources{\parencite{desa2024pycolleff}.}
+
+\end{frame}
+
+% Original presentation frame 39
+\begin{frame}[t,shrink=5]{Normalized mass becomes physical density only after coordinate scales define the bin areas}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Shape representation}
+\[\sum_{a,b}H_{ij}^{(s)}[a,b]=1.\]The CVAE learns projected shape in normalized probability-mass coordinates.
+\end{block}
+
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{block}{Physical reconstruction}
+\[\rho_{ij}^{(s)}[a,b]=\frac{H_{ij}^{(s)}[a,b]}{\Delta\xi_{i,a}^{(s)}\Delta\xi_{j,b}^{(s)}}.\]Bin edges are determined by the predicted centroids and RMS spreads.
+\end{block}
+
+\end{column}
+\end{columns}
+\begin{block}{Terminology}
+RMS spread remains defined for non-Gaussian distributions with finite second moment but does not characterize tails, asymmetry or multimodality. Only the transverse spatial spreads are conventional beam sizes under the stated optics assumptions.
+\end{block}
+
+\end{frame}
+
+% Original presentation frame 40
+\begin{frame}[t,shrink=5]{The CVAE and endpoint propagators use different objectives}
+\begin{block}{Snapshot CVAE pretraining}
+\[\mathcal L_{\rm CVAE}=\mathcal L_{\rm rec}+10^{-2}\mathcal L_{\rm KL}+10^{-3}\mathcal L_\sigma+10^{-3}\mathcal L_{\rm cent}.\]
+\end{block}
+\begin{block}{Endpoint propagation}
+\[\mathcal L_{\rm prop}=\mathcal L_{{\rm hist},N}+\beta_{\rm KL}\mathcal L_{\rm KL}+10\mathcal L_{\log\sigma,N}+10\mathcal L_{m,N}.\]
+\end{block}
+\begin{block}{Training scope}
+The decoder is frozen during the window study, encoder/posterior heads, tokenizer and latent propagator remain trainable. Later, the distribution branch is frozen while the physical-statistics head is fine-tuned. No intermediate physical checkpoint appears in the loss.
+\end{block}
+
+\sources{\parencite{kingma2014vae,sohn2015cvae}.}
+
+\end{frame}
+
+% Original presentation frame 41
+\begin{frame}[t,shrink=5]{The reported metrics probe complementary properties of the reconstructed distribution}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lll}\toprule
+Metric & Symbol & Interpretation\\\midrule
+Relative histogram error & $\epsilon_{\mathrm{rel}}$ & Projected mass discrepancy\\
+Mean absolute centroid error & $\|\widehat{\mathbf m}-\mathbf m\|_1/6$ & Centroid accuracy\\
+Mean RMS-spread error & $\|\widehat{\boldsymbol\sigma}-\boldsymbol\sigma\|_1/6$ & Coordinate-scale accuracy\\
+Wasserstein distance & $W_1(\widehat\rho,\rho)$ & Geometric mass displacement\\
+Sliced Wasserstein distance & $\mathrm{SW}(\widehat\rho,\rho)$ & Distributional transport discrepancy\\
+Residual bias & $\mathbb E[\widehat H-H]$ & Systematic reconstruction structure\\
+Inference time & $t_{\mathrm{inf}}$ & Neural forward-evaluation cost\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}\[\epsilon_{\rm rel}=\frac1{15B}\sum_{s=1}^{B}\sum_{p=1}^{15}\frac{\|\widehat H_{N,p}^{(s)}-H_{N,p}^{(s)}\|_1}{\|H_{N,p}^{(s)}\|_1+\varepsilon}.\]
+\sources{\parencite{peyre2019transport}.}
+
+\end{frame}
+
+% Original presentation frame 42
+\begin{frame}[t,shrink=5]{The full window table confirms the same single-seed non-monotonic trend}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{rrrrrr}\toprule
+$w$ & $\beta_{\mathrm{KL}}$ & Selected epoch & Mean rel. error & Worst-proj. error & Mean KL\\\midrule
+1 & $10^{-4}$ & 18 & 0.612 & 0.923 & 0.418\\
+2 & $10^{-4}$ & 24 & 0.548 & 0.846 & 0.356\\
+4 & $10^{-3}$ & 31 & 0.492 & 0.778 & 0.238\\
+8 & $10^{-3}$ & 34 & 0.468 & 0.742 & 0.211\\
+16 & $10^{-4}$ & 27 & 0.511 & 0.801 & 0.304\\
+32 & $10^{-5}$ & 21 & 0.579 & 0.889 & 0.447\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}\begin{block}{Scope}
+$w=8$ is the lowest observed validation value in this run, no seed-to-seed error bars are available.
+\end{block}
+
+\end{frame}
+
+% Original presentation frame 43
+\begin{frame}[t,shrink=5]{The complete fixed-sample uncertainty table separates latent spread from ensemble-mean discrepancy}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}\toprule
+Representation & Mean std. & Maximum std. & Mean variance & Maximum variance & Mean abs. discrepancy & Maximum abs. discrepancy\\\midrule
+Normalized mass & $3.748986\times10^{-6}$ & $3.138230\times10^{-4}$ & $6.816308\times10^{-10}$ & $9.848490\times10^{-8}$ & $7.364131\times10^{-5}$ & $1.159624\times10^{-2}$\\
+Physical density & $4.003429\times10^2$ & $3.244647\times10^4$ & $7.850748\times10^6$ & $1.052774\times10^9$ & $2.222052\times10^4$ & $3.394383\times10^6$\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}\begin{block}{Interpretation}
+The ensemble varies the conditional latent state of one fixed trained model. It does not marginalize over weights or absorb measurement noise, finite-data uncertainty, architecture uncertainty, model discrepancy or OOD error.
+\end{block}
+
+\end{frame}
+
+% Original presentation frame 44
+\begin{frame}[t,shrink=5]{The nominal Xsuite-to-GNO ratio is about , not a controlled simulator speed-up}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrr}\toprule Stage & Samples & Particles/grid & Time/sample & Total\\\midrule
+Xsuite tracking & 2048 & $10^6$ particles & 1.41 s & 2904.52 s\\
+PyColleff & 2048 & 2048 points & 2.72 s & 5568.32 s\\
+Histogram generation & 2048 & $10^6$ particles & 2.32 ms & 4.75 s\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}\[\frac{1.41\,\mathrm s}{2.338\times10^{-3}\,\mathrm s}\simeq603.\]\begin{block}{Qualification}
+Simulator and neural timings were not measured under one hardware-normalized protocol, batching, hardware, precision, parallelization, cache state and software conditions differ.
+\end{block}
+
+\end{frame}
+
+% Original presentation frame 45
+\begin{frame}[t,shrink=5]{The main beam-physics identities are not hard constraints in the present surrogate}
+\begin{center}\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{p{.24\textwidth}p{.68\textwidth}}\toprule Constraint/property & Status in this work\\\midrule
+Exact symplecticity & not imposed on the learned 6D surrogate\\
+Charge conservation & normalized histogram mass is enforced, no full-6D conservation law is imposed\\
+Panofsky--Wenzel & motivates wake consistency, not a loss or architectural identity\\
+Haïssinski equilibrium & motivates the longitudinal benchmark, not a full-lattice checkpoint constraint\\
+Intermediate trajectory & not validated because simulator checkpoints are absent\\
+Full 6D joint consistency & not guaranteed by 15 independently represented marginals\\
+Calibrated predictive UQ & not achieved, the conditional latent ensemble is under-dispersed\\\bottomrule\end{tabular}
+\end{adjustbox}\end{center}
+\sources{\parencite{huang2024symplectic,metral2021wake,zhou2023haissinski}.}
+
+\end{frame}
+
+% Original presentation frame 46
+\begin{frame}[t,shrink=5]{A reliable accelerator surrogate requires checkpoint supervision, broader 6D representations and calibrated uncertainty}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.49\textwidth}
+\begin{block}{Immediate validation}
+\begin{itemize}
+\item Intermediate simulator checkpoints,
+\item Repeated seeds and deep ensembles,
+\item Broader parameter domains and OOD tests,
+\item Point-cloud/flow 6D comparisons,
+\item Physical constraints and conservation tests,
+\item Empirical coverage calibration.
+\end{itemize}
+\end{block}
+
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{block}{Potential after validation}
+\begin{itemize}
+\item Sensitivity analysis,
+\item Multi-parameter scans,
+\item Design-space reduction,
+\item Bayesian optimization under constraints,
+\item Simulation/measurement calibration,
+\item Uncertainty-aware digital-twin workflows.
+\end{itemize}
+\end{block}
+
+\end{column}
+\end{columns}
+
+\sources{\parencite{hoover2024tomography,roussel2024bayesian}.}
+
+\end{frame}
+

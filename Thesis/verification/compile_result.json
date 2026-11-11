@@ -1,0 +1,21 @@
+{
+  "pass": true,
+  "commands": [
+    {
+      "command": "xelatex",
+      "exit": 0
+    },
+    {
+      "command": "bibtex",
+      "exit": 0
+    },
+    {
+      "command": "xelatex",
+      "exit": 0
+    },
+    {
+      "command": "xelatex",
+      "exit": 0
+    }
+  ]
+}

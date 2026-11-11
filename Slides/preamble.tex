@@ -1,0 +1,38 @@
+\usepackage{fontspec}
+\setsansfont[Path=fonts/,BoldFont=Roboto-Bold.otf,ItalicFont=Roboto-Italic.otf,BoldItalicFont=Roboto-BoldItalic.otf]{Roboto-Regular.otf}
+\setmainfont[Path=fonts/,BoldFont=LatinModernRoman-Bold.otf,ItalicFont=LatinModernRoman-Italic.otf]{LatinModernRoman-Regular.otf}
+\setmonofont[Path=fonts/]{LatinModernMono-Regular.otf}
+\usefonttheme{professionalfonts}
+\usepackage{amsmath,amssymb,mathtools,unicode-math}
+\setmathfont[Path=fonts/]{LatinModernMath.otf}
+\setmathfont[Path=fonts/,version=bold]{LatinModernMath.otf}
+\usepackage{graphicx,booktabs,array,adjustbox}
+\graphicspath{{images/}}
+\definecolor{accent}{RGB}{16,120,149}
+\definecolor{accentpink}{RGB}{221,25,104}
+\definecolor{blockbg}{RGB}{247,247,251}
+\definecolor{alertbg}{RGB}{255,242,248}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{structure}{fg=accent}
+\setbeamercolor{frametitle}{fg=black,bg=white}
+\setbeamercolor{block title}{fg=black,bg=blockbg}
+\setbeamercolor{block body}{fg=black,bg=blockbg}
+\setbeamercolor{block title alerted}{fg=black,bg=alertbg}
+\setbeamercolor{block body alerted}{fg=black,bg=alertbg}
+\setbeamerfont{frametitle}{size=\large,series=\bfseries}
+\setbeamerfont{block title}{size=\footnotesize,series=\bfseries}
+\setbeamerfont{block body}{size=\footnotesize}
+\setbeamerfont{block title alerted}{size=\footnotesize,series=\bfseries}
+\setbeamerfont{block body alerted}{size=\footnotesize}
+\setbeamerfont{normal text}{size=\footnotesize}
+\setbeamertemplate{navigation symbols}{}
+\setbeamersize{text margin left=7mm,text margin right=7mm}
+\setbeamertemplate{itemize items}[circle]
+\setbeamertemplate{headline}{\vskip1.2pt\hbox to\paperwidth{\hspace{7mm}{\fontsize{4}{5}\selectfont\color{gray}\insertframenumber/28}\hfill{\fontsize{4}{5}\selectfont\color{gray}S. Martinez | LASCALA M2 Thesis 2026}\hspace{7mm}}\vskip1pt{\color{gray!20}\hrule height1pt}}
+\setbeamertemplate{footline}{}
+\newcommand{\sources}[1]{\vfill\par{\fontsize{4.5}{5.5}\selectfont\color{gray}Sources: #1\par}}
+\usepackage[authoryear,round]{natbib}
+\usepackage{bibentry}
+\bibliographystyle{plainnat}
+\newcommand{\parencite}[1]{\citep{#1}}
+\hypersetup{colorlinks=true,urlcolor=accentpink,citecolor=accentpink,pdfauthor={Santiago Martinez Saenz},pdftitle={Exploratory modelling of collective effects in the FCC-ee HEB}}
